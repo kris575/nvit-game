@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nvit-app
+      app: nvit-game
   template:
     metadata:
       labels:
-        app: nvit-app
+        app: nvit-game
     spec:
       containers:
-        - name: nvit-app
-          image: davidokpe/nvit-app:latest
+        - name: nvit-game
+          image: chrisgospel12/nvit-game
           ports:
             - containerPort: 5000
 
@@ -33,4 +33,4 @@ spec:
       targetPort: 5000
       nodePort: 30001
   selector:
-    app: nvit-app
+    app: nvit-game
